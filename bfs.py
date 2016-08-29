@@ -3,6 +3,8 @@ def get_bfs(adj_list, start_node):
     return BFS for given adjacency list and starting node
     '''
     result = {}
+    # set the start node parent to None
+    # and level to 0
     result[start_node] = {
         'parent': None,
         'level': 0
@@ -16,6 +18,8 @@ def get_bfs(adj_list, start_node):
             # iterate through the adjacency list of the current node
             # provided the currrent node is not visited
             for v in [x for x in adj_list[u] if x not in result]:
+                # set the v node parent to u
+                # and level to i
                 result[v] = {
                     'parent': v,
                     'level': i
