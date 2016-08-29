@@ -1,4 +1,7 @@
 def get_dfs(adj_list):
+    '''
+    return DFS for given adjacency list
+    '''
     parent = {}
 
     def walk_node(u):
